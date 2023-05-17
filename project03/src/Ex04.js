@@ -4,28 +4,43 @@ import './style/ex04.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Button } from 'react-bootstrap';
 import { useState } from 'react';
+import { useEffect } from 'react';
 export const Ex04 = () => {
 
   //이미지 경로 가져오기! (public폴더 이용할 때만!)
   let imgPath = '/img/dice';
   
-  const[myDice, setMydice] = useState(0);
-  const[comDice, setComdice] = useState(0);
-  const[myPath, setMyPath] = useState("/img/dice");
-  const[comPath, setComPath] = useState("/img/dice");
+  const[myDice, setMydice] = useState(1);
+  const[comDice, setComdice] = useState(1);
+  const[myPath, setMyPath] = useState("/img/dice1.png");
+  const[comPath, setComPath] = useState("/img/dice1.png");
   const[myScore, setMyscore] = useState(0);
   const[comeScore, setComscore] = useState(0);
   
   const btnCk = ()=>{
-    setMydice((Math.floor(Math.random()*6)+1));
-    setComdice((Math.floor(Math.random()*6)+1));
-    setMyPath(imgPath+myDice+".png");
-    // if(myDice>comDice){
-    //   myScore+=1;
-    // }
-    // else if(myDice<comDice){
-    //   comeScore+=1;
-    // }
+    let ran1 = (Math.floor(Math.random()*6)+1) ;
+    let ran2 = (Math.floor(Math.random()*6)+1) ;
+
+    setMydice(ran1);
+    setComdice(ran2);
+    setMyPath(imgPath+ran1+".png");
+    setComPath(imgPath+ran2+".png");
+    if(myDice>comDice){
+      setMyscore(myScore+1);
+    }
+    else if(myDice<comDice){
+      setComscore(comeScore+1);
+    }
+    else{
+      setMyscore(myScore);
+      setComscore(comeScore);
+    }
+    if(myScore==5){
+      alert("이김");
+    }
+    else if(comeScore==5){
+      alert("짐");
+    }
     
   }
   
@@ -57,10 +72,9 @@ export const Ex04 = () => {
             <Button variant="secondary" onClick={btnCk}>던지기!</Button>{" "}
             <Button variant="danger" onClick={btnCk}>RESET</Button>
         </div>
-
         <div className='board-container'>
-            <Board path={myPath}/>
-            <Board path={comPath}/>
+            <Board path={myPath} name="나" score={myScore}/>
+            <Board path={comPath} name="컴퓨터" score={comeScore}/>
         </div>
     </div>
   )
