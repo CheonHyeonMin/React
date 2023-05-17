@@ -9,8 +9,10 @@ import './index.css';
 // import App from './Ex02'
 
 // 03. random값 맞추기 실습
-import App from './Ex03'
+// import App from './Ex03'
 
+// 04. useState 실습2 - 주사위게임
+import App from './Ex04'
 
 
 
