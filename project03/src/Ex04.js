@@ -17,9 +17,14 @@ export const Ex04 = () => {
   const[myScore, setMyscore] = useState(0);
   const[comeScore, setComscore] = useState(0);
   
+
+  const makeRandom = ()=>{
+      return parseInt(Math.random()*6)+1
+  }
+
   const btnCk = ()=>{
-    let ran1 = (Math.floor(Math.random()*6)+1) ;
-    let ran2 = (Math.floor(Math.random()*6)+1) ;
+    let ran1 = (makeRandom());
+    let ran2 = (makeRandom());
 
     setMydice(ran1);
     setComdice(ran2);
@@ -40,8 +45,15 @@ export const Ex04 = () => {
     }
     else if(comeScore==5){
       alert("짐");
+      makeReset()
     }
     
+  }
+  const makeReset = ()=>{
+    setMydice(1);
+    setComdice(1);
+    
+
   }
   
   /* 
@@ -70,7 +82,7 @@ export const Ex04 = () => {
         
         <div className='btn-container'>
             <Button variant="secondary" onClick={btnCk}>던지기!</Button>{" "}
-            <Button variant="danger" onClick={btnCk}>RESET</Button>
+            <Button variant="danger" onClick={makeReset}>RESET</Button>
         </div>
         <div className='board-container'>
             <Board path={myPath} name="나" score={myScore}/>
