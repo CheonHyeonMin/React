@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Ex02MenuItemB = ({name, price, content,imgSrc}) => {
+const Ex03MenuItemC = ({name, price, content, imgSrc}) => {
   return (
     <div>
         <img src={imgSrc} width="200px"/>
@@ -8,9 +8,11 @@ const Ex02MenuItemB = ({name, price, content,imgSrc}) => {
             <span>{name}</span>{" "}
             <span> {price}원 </span>
         </p>
+        
         <p> {content} </p>
+
     </div>
   )
 }
 
-export default Ex02MenuItemB
+export default Ex03MenuItemC

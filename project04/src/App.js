@@ -5,7 +5,7 @@ function App() {
 
   let students =[
     {name : '차은우', age : 26, gender : 'man'},
-    {name : '류승범', age : 26, gender : 'man'},
+    {name : '장원영', age : 26, gender : 'woman'},
     
   ];
   
@@ -27,10 +27,34 @@ function App() {
     안녕하세요 저는 류승범 입니다. 제 나이는 26살입니다.
     =>p태그로 화면에 출력
   */
+
+    //================================ Filter ============================
+    let womanList =students.filter(item => item.gender =='woman')
+    console.log('woman List :', womanList);
+
+
+
   return (
     <div>
+
+    <h2>Map 함수</h2>
+    {newStudents}
       {students.map(item => <p key={item.name}>안녕하세요 저는 {item.name}입니다. 제 나이는 {item.age}입니다.</p>)}
+    
+
+    <hr/>
+    <h2>Filter함수</h2>
+    {womanList.map(item => <p key={item.name} >{item.name}이구요, {item.age}살입니다.</p>)}
+    {/* filter함수는 배열의 각 요소에 대해서 주어진 함수의 결과 값이 true인
+      요소들만 모아서 새로운 배열로 반환하는 함수를 의미한다. 
+    */}
+
+    
+    
     </div>
+
+
+
   );
   }
 

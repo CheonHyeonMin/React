@@ -2,14 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-// 1. map 함수 예제
+// 1. map 함수 예제, filter 함수
 // import App from './App';
 
 // 2. map 함수 실습
 // import App from './Ex02'
 
 // 2. map 함수 실습 선생님꺼
-import App from './Ex02B'
+// import App from './Ex02B'
+
+import App from './Ex03'
 
 import reportWebVitals from './reportWebVitals';
 
