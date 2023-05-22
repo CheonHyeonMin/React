@@ -11,8 +11,10 @@ const Ex03 = () => {
     <DarkContext.Provider value={{darkColor, setDarkColor}}>
     <div>
         <Ex03Header/>
-        <Ex03Main/>
     </div>
+    <div>
+        <Ex03Main/>
+    </div>    
     </DarkContext.Provider>
   )
 }

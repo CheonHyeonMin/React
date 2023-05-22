@@ -7,7 +7,10 @@ const Ex03Header = () => {
   return (
     <div>
       <div style={{
+        width: '100px',
+        height: '100px',
         background : `${darkColor}`
+        
       }}
       ></div>
     </div>
