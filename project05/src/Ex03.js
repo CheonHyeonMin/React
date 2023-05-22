@@ -6,16 +6,24 @@ import { useState } from 'react'
 
 const Ex03 = () => {
 
-  const [darkColor, setDarkColor] = useState('white');
+  const [darkColor, setDarkColor] = useState("white");
+  const [TextColor, setTextColor] = useState("black");
+  const [IsDark, setIsDark] = useState(false)
   return (
-    <DarkContext.Provider value={{darkColor, setDarkColor}}>
-    <div>
+    
+    <div style={{
+      backgroundColor : `${darkColor}`,
+      color : `${TextColor}`
+      
+    }}>
+      <DarkContext.Provider value={{IsDark, setIsDark, setDarkColor, setTextColor}}>
         <Ex03Header/>
-    </div>
-    <div>
         <Ex03Main/>
-    </div>    
-    </DarkContext.Provider>
+      </DarkContext.Provider>
+        
+    </div>
+    
+    
   )
 }
 

@@ -10,6 +10,7 @@ const Ex02ColorList = () => {
     */
     const{setChoiceColor} = useContext(ColorContext)
   return (
+
     <div style={{display : 'flex'}}>
         {color.map(item =>
         <div 
