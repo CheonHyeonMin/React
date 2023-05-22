@@ -8,7 +8,6 @@ const Ex03 = () => {
 
     let menu1 = menu.list.map(item => <MenuItemC key={item.name} name={item.name} price={item.price} content={item.content} imgSrc={item.imgSrc}/>)
 
-
   return (
     
     <div>
