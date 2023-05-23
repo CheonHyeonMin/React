@@ -10,7 +10,7 @@ const Ex04ListItem = ({todo, index}) => {
     <div>
         <input type="checkbox" id="todo-item"
                 onChange={()=>{handleTodoToggle(index)}}></input>
-        <label htmlFor="todo-item" style={{textDecoration : todo.completed ? "line-through" : "none"}}>{todo.text}</label>
+        <label style={{textDecoration : todo.completed ? "line-through" : "none"}}>{todo.text}</label>
         <button onClick={()=>{handleTodoDelete(index)}}>삭제</button>
         
     </div>

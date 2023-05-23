@@ -12,7 +12,7 @@ const Ex04List = () => {
         {todos.map((item, idx) =>
             <Ex04ListItem todo={item} index={idx} key={item.text+idx}/>
         )}
-        <p></p>
+        
     </div>
   )
 }
