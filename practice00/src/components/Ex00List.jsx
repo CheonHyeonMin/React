@@ -4,11 +4,15 @@ import { useContext } from 'react'
 import { TodoContext } from '../context/Ex00TodoContext'
 
 const Ex00List = () => {
+    const {todos} = useContext(TodoContext)
     
   return (
     <div>
-        (todos.map)
-        <Ex00ListItem/>
+        <h1>Todo-List</h1>
+        {todos.map((item)=>
+            <Ex00ListItem todo={item}/>
+        )}
+        
 
     </div>
   )
