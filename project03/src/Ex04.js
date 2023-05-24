@@ -53,7 +53,6 @@ export const Ex04 = () => {
     setMydice(1);
     setComdice(1);
     
-
   }
   
   /* 
