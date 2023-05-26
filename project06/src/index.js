@@ -8,7 +8,13 @@ import './index.css';
 // import App from './Ex02'
 
 //3. useState, useEffect 복습 - 참참참
-import App from './Ex03'
+// import App from './Ex03'
+
+//4. useEffect를 통해 영화 open API 가져오기 (Fetch, Axios)
+// import App from './Ex04'
+
+//5. useEffect를 통해 날씨 데이터 가져오기(axios)
+import App from './Ex05'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
