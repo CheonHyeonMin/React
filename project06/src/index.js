@@ -5,7 +5,10 @@ import './index.css';
 // import App from './Ex01';
 
 //2. Funcion Component - useEffect
-import App from './Ex02'
+// import App from './Ex02'
+
+//3. useState, useEffect 복습 - 참참참
+import App from './Ex03'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
