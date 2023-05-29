@@ -1,12 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 
 // import App from './App';
 
 // 1. 양방향 데이터 전달
-// import App from './Ex01'
+import App from "./Ex01";
 
 //2. Context API (useContext)
 // import App from './Ex02'
@@ -24,15 +23,11 @@ import './index.css';
 // import App from './Ex06'
 
 //7. useRef 실습 -사진 변경 &focus
-import App from './Ex07'
-import reportWebVitals from './reportWebVitals';
+// import App from "./Ex07";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  
-    <App />
-  
-);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

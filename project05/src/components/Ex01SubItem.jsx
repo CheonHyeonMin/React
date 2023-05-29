@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Ex01SubItem = ({text}) => {
-  return (
-    <div>{text}</div>
-  )
-}
+const Ex01SubItem = ({ text }) => {
+  return <div>{text}</div>;
+};
 
-export default Ex01SubItem
+export default Ex01SubItem;
