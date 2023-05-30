@@ -10,8 +10,10 @@ const Ex05 = () => {
     const[temp, setTemp] = useState("0");
     const[icon, setIcon] = useState("");
     const[cloud, setCloud] = useState("");
-    const getCity = ()=>{
-        console.log('get City');
+    const getCity = (e)=>{
+        console.log('get City',e.target.innerText);
+        setCity(e.target.innerText);
+        
 
     }
     const getData = ()=>{
@@ -34,6 +36,8 @@ const Ex05 = () => {
             else{
                 setCloud("맑음");
             }
+
+            
 
             //아이콘 세팅
         
@@ -61,7 +65,7 @@ const Ex05 = () => {
     useEffect(()=>{
         getData();
         
-    },[])
+    },[city])
 
   return (
     <div className='weather-container'>
@@ -75,7 +79,7 @@ const Ex05 = () => {
             
             </div>
             <div className='button-container'>
-                {cityList.map(item => <button key={item}>{item}</button>)}
+                {cityList.map(item => <button key={item} onClick={getCity}>{item}</button>)}
             </div>
         </div>
     </div>
