@@ -6,6 +6,7 @@ const Ex01 = () => {
   const [inputTxt, setInputTxt] = useState("");
   const changeData = (e) => {
     console.log("상위 컴포넌트에 있는 함수!", e.target.value);
+    console.log("테스트");
   };
   return (
     <div>
