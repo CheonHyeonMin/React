@@ -16,6 +16,9 @@ const Ex01 = () => {
         props를 통해 간단하게 전송할 수 있다!
 
         */}
+
+
+        
       <p>
         <input
           type="text"
