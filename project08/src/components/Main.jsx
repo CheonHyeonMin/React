@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const Main = () => {
   return (
-    <div className='main-container'>
-         <img
+    <div className="main-container">
+      <img
         width="400px"
         src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/9WA0/image/z5Fp0o9Z2Afbl5uV5uoKed-_0kw"
       ></img>
@@ -18,7 +18,7 @@ const Main = () => {
         있다
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

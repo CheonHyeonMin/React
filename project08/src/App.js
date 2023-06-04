@@ -1,12 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import { Route, Routes } from 'react-router-dom';
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-
   /* 
   미션 수행 순서
   1) Route 처리
@@ -25,14 +24,14 @@ function App() {
   6)Product Detail Mission
   */
   return (
-    <div className='container'>
+    <div className="container">
       <Routes>
-        <Route path='/' element={<Header/>}>
-          <Header/>
+        <Route path="/" element={<Header />}>
+          <Header />
         </Route>
-        <Main/>
-        <Footer/>
-      </Routes>  
+        <Main />
+        <Footer />
+      </Routes>
     </div>
   );
 }

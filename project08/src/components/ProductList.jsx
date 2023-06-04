@@ -1,8 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ProductList = () => {
-
-    /*
+  /*
     중요! 
     Mission!
     1) public  안에 두었던 bestList.json 값을 가지고 올 것
@@ -10,9 +9,7 @@ const ProductList = () => {
     2) 가지고온 데이터를 state값 관리
         =>map함수, 가지고온 item값을 props로 처리 (index값도)
     */
-  return (
-    <div className='list-container'>ProductList</div>
-  )
-}
+  return <div className="list-container">ProductList</div>;
+};
 
-export default ProductList
+export default ProductList;
