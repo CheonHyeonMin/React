@@ -3,7 +3,11 @@ import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+import ProductList from "./components/ProductList";
 import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
+import ProductDetail from "./components/ProductDetail";
+import ProductItem from "./components/ProductItem";
 
 function App() {
   /* 
@@ -23,15 +27,24 @@ function App() {
   5)Product Item Mission
   6)Product Detail Mission
   */
+
+  const [list, setList] = useState([]);
+
   return (
     <div className="container">
+      <Header />
       <Routes>
-        <Route path="/" element={<Header />}>
-          <Header />
-        </Route>
-        <Main />
-        <Footer />
+        <Route path="/" element={<Main />} />
+        <Route
+          path="/ProductList"
+          element={<ProductList list={list} setList={setList} />}
+        />
+        <Route
+          path="/ProductDetail/:num"
+          element={<ProductItem list={list} setList={setList} />}
+        />
       </Routes>
+      <Footer />
     </div>
   );
 }

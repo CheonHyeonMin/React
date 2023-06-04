@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const ProductItem = () => {
+const ProductItem = ({ item }) => {
   /* 
     Mission!
     1. 누군가가 item을 선택했을 때, 해당 아이템에 대한 productDetail로 이동
         => 상품별로 고유번호 '/detail/1' ,'/detail/2' 이런식으로 이동
+        이거는 navigate 써야되는거 아닌가?
+        상품을 누를때마다 고유번호까지 같이 넘겨주기
+        useParams써버 고유번호 넘기기
     
     */
+  const nav = useNavigate();
+  const getDetail = () => {
+    nav(`/productgetDetail/${item.no}`);
+  };
+
   return (
-    <div className="product-container">
-      <img src="" width="100px" />
-      <p>제품의 이름 : </p>
-      <p>제품의 가격 : </p>
+    <div className="product-container" onClick={getDetail}>
+      <img src={item.src} width="100px" />
+      <p>{item.title}</p>
+      <p>{item.price}</p>
     </div>
   );
 };

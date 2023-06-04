@@ -11,11 +11,13 @@ const Header = () => {
 
   return (
     <div className="header-container">
-      <Link to="/Main">
-        <div className="link-container">idus</div>
-      </Link>
+      <div className="link-container">
+        <Link to="/">idus</Link>
+      </div>
 
-      <div className="link-container">MainList</div>
+      <div className="link-container">
+        <Link to="/ProductList">MainList</Link>
+      </div>
 
       <div className="link-container">Login/Join</div>
     </div>
