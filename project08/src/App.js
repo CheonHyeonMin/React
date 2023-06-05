@@ -41,7 +41,7 @@ function App() {
         />
         <Route
           path="/ProductDetail/:num"
-          element={<ProductItem list={list} setList={setList} />}
+          element={<ProductDetail list={list} setList={setList} />}
         />
       </Routes>
       <Footer />

@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-const ProductDetail = ({ item }) => {
+const ProductDetail = ({ list }) => {
   /* 
   useParams()
   -url 의 파라미터 정보를 가져올 수 있는 React Hook
@@ -14,7 +14,17 @@ const ProductDetail = ({ item }) => {
     2) let {파라미더정보} = useParams()
   */
 
-  return <div></div>;
+  let {id} = useParams();
+
+  
+  return (
+  <div className="product-container">
+    <img src={list[id-1].src} alt="" width="200px" />
+    <p>{list[id -1].title}</p>
+    <p>{list[id -1].price}원</p>
+    <p>{list[id -1].delivery}</p>
+  </div>
+  );
 };
 
 export default ProductDetail;

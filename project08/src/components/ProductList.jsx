@@ -12,13 +12,15 @@ const ProductList = ({ list, setList }) => {
         =>map함수, 가지고온 item값을 props로 처리 (index값도 : 인덱스 값을 useParams로 넣어줘야되기 떄문에)
     */
 
-  const getData = () => {
-    axios.get("/bestList.json").then((res) => setList(res.data.list));
-  };
+  // const getData = () => {
+  //   axios.get("/bestList.json").then((res) => setList(res.data.list));
+  // };
 
   useEffect(() => {
-    getData();
-  });
+    axios.get("http://localhost:3000/bestList.json").then((res) =>{
+      setList(res.data.list);
+    } );
+  },[]);
 
   return (
     <div className="list-container">

@@ -12,8 +12,9 @@ const Header = () => {
   return (
     <div className="header-container">
       <div className="link-container">
-        <Link to="/">idus</Link>
+        <Link to="/">PYO</Link>
       </div>
+      
 
       <div className="link-container">
         <Link to="/ProductList">MainList</Link>
