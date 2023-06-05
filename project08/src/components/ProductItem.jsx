@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const ProductItem = ({ item }) => {
+const ProductItem = ({ item, idx }) => {
   /* 
     Mission!
     1. 누군가가 item을 선택했을 때, 해당 아이템에 대한 productDetail로 이동
@@ -11,16 +11,17 @@ const ProductItem = ({ item }) => {
         useParams써버 고유번호 넘기기
     
     */
+   console.log(item, idx);
   const nav = useNavigate();
   const getDetail = () => {
-    nav(`/productgetDetail/${item.no}`);
+    nav(`/ProductDetail/${idx}`);
   };
 
   return (
     <div className="product-container" onClick={getDetail}>
       <img src={item.src} width="100px" />
       <p>{item.title}</p>
-      <p>{item.price}</p>
+      <p>{item.price}원</p>
     </div>
   );
 };

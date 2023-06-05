@@ -24,8 +24,11 @@ const ProductList = ({ list, setList }) => {
 
   return (
     <div className="list-container">
-      {list.map((item) => (
+      {/* {list.map((item) => (
         <ProductItem item={item} index={item.no} />
+      ))} */}
+      {list.map((item,idx)=>(
+        <ProductItem key={item.no} item={item} idx={idx} />
       ))}
     </div>
   );

@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import ProductDetail from "./components/ProductDetail";
 import ProductItem from "./components/ProductItem";
+import Storage from "./components/Storage";
 
 function App() {
   /* 
@@ -41,8 +42,9 @@ function App() {
         />
         <Route
           path="/ProductDetail/:num"
-          element={<ProductDetail list={list} setList={setList} />}
+          element={<ProductDetail list={list} />}
         />
+        <Route path="/storage" element={<Storage/>}/>
       </Routes>
       <Footer />
     </div>

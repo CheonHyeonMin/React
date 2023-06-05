@@ -18,6 +18,9 @@ const Header = () => {
 
       <div className="link-container">
         <Link to="/ProductList">MainList</Link>
+        {" "}
+        <Link to="/storage">저장소</Link>
+        
       </div>
 
       <div className="link-container">Login/Join</div>
